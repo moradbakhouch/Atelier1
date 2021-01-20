@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Atelier 1</title>
+        <link rel="stylesheet" href="Style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <form id="myForm" method="GET">
+            <div>
+                <label for="name">nom</label>
+                <input type="text" id="name" onblur="verifyName();">(*)
+            </div>
+            <small id="nameErreurs"></small>
+            <div>
+                <label for="password">password</label>
+                <input type="password" id="password" onblur="verifyPassword();">
+            </div>
+            <small id="passwordErreurs"></small>
+            <div>
+                <label>afficher div</label>
+                <input id="a" type="radio" name="afficherDiv" onchange="AffDiv();">oui
+                <br/>
+                <input id="b" type="radio" name="afficherDiv" onchange="AffDiv();">non
+            </div>
+            <div id="divVille" style="display: none;">
+                <label>choisir une ville</label>
+                <select name="choisirVille" id="listV">
+                    <option value="0" disabled selected value>Selectionner ville</option>
+                    <option value="1">Casablanca</option>
+                    <option value="2">Marrakech</option>
+                    <option value="3">Rabat</option>
+                    <option value="4">Tangier</option>
+                </select>
+            </div>
+            <small id="listErreurs"></small>
+            <div>
+                <input type="button" value="se connecter" onclick="verifyPassword(), verifyName(), verifyList();">
+                <input type="button" value="annuler">
+            </div>
+            
+        </form>
+    </body>
+</html>
